@@ -10,7 +10,7 @@ const bent = require('bent')
 const msgLimit = JSON.parse(fs.readFileSync('./lib/msgLimit.json'))
 const ban = JSON.parse(fs.readFileSync('./lib/blocked.json'))
 
-module.exports = mkh = async (mkh, message) => {
+module.exports = mkh = async (mkh,client, message) => {
     try {
         const { type, id, from, t, sender, isGroupMsg, chat, chatId, caption, isMedia, mimetype, quotedMsg, mentionedJidList, author, quotedMsgObj } = message
         let { body } = message
